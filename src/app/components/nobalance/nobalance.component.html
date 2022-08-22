@@ -1,0 +1,22 @@
+<h1>Students without balance</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Amount Balance</th>
+  </tr>
+  <tr *ngFor="let student of student">
+    <td>{{student.name}}</td>
+    <td>{{student.gender}}</td>
+    <td>{{student.amount_balance}}</td>
+
+  </tr>
+</table>
+
+
+
+
+<ng-template #noStudent>
+<p>No students</p>
+</ng-template>

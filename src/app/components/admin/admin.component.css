@@ -1,0 +1,41 @@
+.admin{
+    background-color:bisque;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.admin{
+    margin-top: 2rem;
+    padding: 20px;
+}
+.allstudents{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: brown;
+    color:#fff;
+    font-size:20px
+
+}
+.students{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: brown;
+    color:#fff;
+    font-size:20px;
+    margin-top: 15px;
+    
+
+}
+.balance{
+    padding: 20px;
+    border-radius: 20px;
+    background-color: brown;
+    color:#fff;
+    font-size:20px;
+    margin-top: 15px;
+
+}
+table{
+    border: 2px solid black;
+}

@@ -1,0 +1,8 @@
+
+.display{
+    display: flex;
+    list-style: none;
+    
+    flex-direction: row;
+    gap: 2rem;
+}

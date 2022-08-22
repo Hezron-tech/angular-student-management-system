@@ -1,0 +1,23 @@
+<div [ngStyle]="{'background-color':'#8B1919','display':'flex', 'justify-content':'space-evenly','color':'#fff'}" class="navbar">
+
+    <div class="logo">
+        <p>THE JITU</p>
+
+    </div>
+
+
+    <div class="nav">
+        <ul [ngClass]="getStyle()">
+            <li routerLink="/">Home</li>
+            
+            <li routerLink="/admin" >Admin</li>
+            
+            <li routerLink="/login" >login</li>
+            <li>logout</li>
+        </ul>
+    </div>
+
+
+
+
+</div>
