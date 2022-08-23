@@ -17,9 +17,7 @@ export class AddStudentComponent implements OnInit {
   validate=false
 
   addStudent(){
-    // if(this.name ===''|| this.gender===''){
-    //   alert('fill all the fields')
-    // }
+    
 
     if(this.name==='' || this.gender===''){
 

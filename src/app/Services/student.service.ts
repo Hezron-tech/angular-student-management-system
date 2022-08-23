@@ -9,7 +9,7 @@ export class StudentService {
 
   constructor() { }
 
-  students:Student[]=[
+  private students:Student[]=[
       {
         name:"Hezron",
         gender:'Male',

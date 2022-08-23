@@ -18,6 +18,7 @@ import { SearchPipe } from './Pipes/search.pipe';
 import { GenderPipe } from './Pipes/gender.pipe';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './auth/auth.guard';
+import { CustomStyleDirective } from './Directives/custom-style.directive';
 
 const routes: Routes = [
   {
@@ -45,6 +46,11 @@ const routes: Routes = [
       {
         path: 'nobalance',
         component: NobalanceComponent,
+      },
+
+      {
+        path: 'add-student',
+        component: AddStudentComponent,
       },
 
     ]
@@ -75,6 +81,7 @@ const routes: Routes = [
     SearchPipe,
     GenderPipe,
     NotFoundComponent,
+    CustomStyleDirective,
   ],
   imports: [
     BrowserModule,
