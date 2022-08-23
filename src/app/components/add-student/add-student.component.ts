@@ -14,9 +14,20 @@ export class AddStudentComponent implements OnInit {
   gender=''
   amount_balance=0
 
+  validate=false
+
   addStudent(){
-    if(this.name ===''|| this.gender===''){
-      alert('fill all the fields')
+    // if(this.name ===''|| this.gender===''){
+    //   alert('fill all the fields')
+    // }
+
+    if(this.name==='' || this.gender===''){
+
+      this.validate=true
+      setTimeout(() => {
+        this.validate=false
+        
+      }, 2000);
     }
     else{
       this.addStudents.emit({

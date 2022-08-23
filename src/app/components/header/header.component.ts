@@ -1,4 +1,6 @@
+import { AuthService } from './../../Services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  prom= new Promise<string>((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve('Welcome to TheJitu School')
+    },3000)
+  })
+
+  onLogout(){
+    this.authService.logout()
+    this.router.navigate(['/'])
   }
 getStyle(){
   return 'display '
 }
+logout(){
+  this.authService.logout()
+  this.router.navigate([''])
+}
+
 }

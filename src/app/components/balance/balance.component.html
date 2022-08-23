@@ -1,15 +1,15 @@
 <h1>Students with balance</h1>
 
-<table>
+<table border = "1">
   <tr>
     <th>Name</th>
     <th>Gender</th>
     <th>Amount Balance</th>
   </tr>
   <tr *ngFor="let student of student">
-    <td>{{student.name}}</td>
+    <td>{{student.name |gender:student.gender}}</td>
     <td>{{student.gender}}</td>
-    <td>{{student.amount_balance}}</td>
+    <td>{{student.amount_balance |currency:'Ksh.'}}</td>
 
   </tr>
 </table>

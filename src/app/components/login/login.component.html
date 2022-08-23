@@ -1,19 +1,24 @@
 <div class="container">
-<div class="section">
+  <div class="section">
     <img src="/assets/undraw_enter_uhqk.svg" alt="">
-</div>
+  </div>
 
-<div class="login">
+  <div class="login">
+    <h2>Login here:</h2>
+
+    <p class="para" *ngIf=validate>Wrong details!</p>
+    <!-- <p class="para" *ngIf=error>please enter your details!</p> -->
 
     <p>Email</p>
     <input type="email" [(ngModel)]="email">
 
     <p>Password</p>
-    <input type="text" [(ngModel)]="password"> <br> <pre></pre>
+    <input type="text" [(ngModel)]="password"> <br>
+    <pre></pre>
 
     <button (click)="onLogin()">Login</button>
 
-</div>
+  </div>
 
 
 

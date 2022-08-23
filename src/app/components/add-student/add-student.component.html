@@ -3,6 +3,8 @@
 
         <h2>Add students</h2>
 
+        <p [ngStyle]="{'color':'red'}" *ngIf=validate>Cannot submit empty form!!</p>
+
         <label>Student Name</label>
         <input type="text" [(ngModel)]="name">
 

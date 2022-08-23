@@ -10,8 +10,9 @@
 
 .login{
     font-size: 30px;
-    background-color: azure;
+    background-color: bisque;
     padding: 5rem;
+    border-radius: 5px;
 }
 
 input{
@@ -26,5 +27,10 @@ button{
     border-radius: 20px;
     font-size: 20px;
     border: none;
-    background-color: bisque;
+    background-color: #8B1919;
+    color: white;
+}
+
+.para{
+    color: red;
 }

@@ -16,19 +16,23 @@ import { AdminComponent } from './components/admin/admin.component';
 import { NobalanceComponent } from './components/nobalance/nobalance.component';
 import { SearchPipe } from './Pipes/search.pipe';
 import { GenderPipe } from './Pipes/gender.pipe';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: HomeComponent ,children:[
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+    ]
   },
 
-  // {
-  //   path: 'students',
-  //   component: StudentsComponent,
-  // },
+  
   {
-    path: 'admin',
+    path: 'admin', canActivate:[AuthGuard],
     component: AdminComponent,children:[
       {
         path: '',
@@ -51,6 +55,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
   },
+
+
+  { path: 'not-found', component: NotFoundComponent },
+    { path: '**', redirectTo: '/not-found' }
 ];
 
 @NgModule({
@@ -66,6 +74,7 @@ const routes: Routes = [
     NobalanceComponent,
     SearchPipe,
     GenderPipe,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

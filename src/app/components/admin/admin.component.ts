@@ -21,7 +21,7 @@ export class AdminComponent implements OnInit {
   }
   allStudents(){
     
-this.router.navigate(["admin/students"])
+this.router.navigate(["admin/"])
   }
 Students(){
 this.router.navigate(["admin/balance"])

@@ -9,8 +9,7 @@ export class StudentService {
 
   constructor() { }
 
-  getStudent():Student[]{
-    return[
+  students:Student[]=[
       {
         name:"Hezron",
         gender:'Male',
@@ -42,7 +41,13 @@ export class StudentService {
 
       }
     ]
-  }}
+
+    getStudent(){
+      return this.students
+    }
+  }
+
+ 
 
 
 

@@ -12,7 +12,7 @@
       <input  type="text" [(ngModel)]="filter"  placeholder="search Student">
   </div>
 
-    <table>
+    <table border = "1">
       <tr>
         <th>Name</th>
         <th>Gender</th>
@@ -21,7 +21,7 @@
       <tr *ngFor="let student of student |search:filter;">
         <td>{{student.name |gender:student.gender }}</td>
         <td>{{student.gender}}</td>
-        <td>{{student.amount_balance}}</td>
+        <td>{{student.amount_balance |currency:'Ksh.'}}</td>
 
       </tr>
     </table>

@@ -1,14 +1,38 @@
 import { Injectable } from '@angular/core';
-import { LoginComponent } from '../components/login/login.component';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService  {
+  
+ 
 
-  isLoggedIn(){
+  constructor(){}
+
+ 
+
+  isLoggedin(){
     return !!localStorage.getItem('token')
   }
 
-  constructor() { }
+  // login(){
+  //   this.isLoggedin=true
+  
+  // }
+  
+  logout(){
+    localStorage.clear()
+  }
+  
+  // isauthenticated(){
+  //   const promise = new Promise<boolean>((resolve, reject)=>{
+  //     setTimeout(()=>{
+  //       resolve(this.isLoggedin)
+  //     },500)
+  //   })
+  //   return promise
+  // }
 }
+
+

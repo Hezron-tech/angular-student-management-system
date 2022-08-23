@@ -10,10 +10,10 @@
         <ul [ngClass]="getStyle()">
             <li routerLink="/">Home</li>
             
-            <li routerLink="/admin" >Admin</li>
+            <li routerLink="/admin" routerLinkActive="active" *ngIf="authService.isLoggedin" >Admin</li>
             
-            <li routerLink="/login" >login</li>
-            <li>logout</li>
+            <li routerLink="/login" *ngIf="!authService.isLoggedin()">login</li>
+            <li (click)="logout()" *ngIf="authService.isLoggedin()">logout</li>
         </ul>
     </div>
 
